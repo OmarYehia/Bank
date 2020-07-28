@@ -107,7 +107,7 @@ document.querySelector('#get-account').onsubmit = e => {
 
 // Withdraw function
 document.querySelector('#withdraw').onclick = e => {
-    e.preventDefault();
+    document.querySelector('#account_header').innerHTML = 'Welcome back, ' + account_info['first_name'] + ' ' + account_info['last_name'];
     fetch('/accounts/' + account_info['id'] + '/withdraw', {
         method: 'PATCH',
         body: JSON.stringify({
@@ -140,7 +140,7 @@ document.querySelector('#withdraw').onclick = e => {
 
 // Deposit function
 document.querySelector('#deposit').onclick = e => {
-    e.preventDefault();
+    document.querySelector('#account_header').innerHTML = 'Welcome back, ' + account_info['first_name'] + ' ' + account_info['last_name'];
     fetch('/accounts/' + account_info['id'] + '/deposit', {
         method: 'PATCH',
         body: JSON.stringify({
