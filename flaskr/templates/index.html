@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <title>FWD Bank</title>
+  </head>
+  
+  <body>
+      <table class="container" id="form-container">
+          <tr>
+              <td class="container" id="column-1">
+                  <form class="form text-center" id="create-form">
+                      <div>
+                          <label for="first_name">Enter your first name</label>
+                          <input type="text" name="first_name" id="first_name">
+                      </div>
+                      <div>
+                          <label for="last_name">Enter your last name</label>
+                          <input type="text" name="last_name" id="last_name">
+                      </div>
+                      <div>
+                          <label for="password-create">Enter password</label>
+                          <input type="password" name="password-create" id="password_create">
+                      </div>
+                      <div>
+                          <label for="deposit_amount">Enter deposit amount</label>
+                          <input type="number" name="deposit_amount" id="deposit_amount">
+                      </div>
+                      <input  type="submit" value="Create Account" id="create_account">
+                  </form>
+              </td>
+              <td class="container"  id="column-2">
+              <form class="form text-center" id="get-account">
+                  <div>
+                      <label for="account_id">Enter your account ID</label>
+                      <input type="text" name="account_id" id="account_id">
+                  </div>
+                  <div>
+                      <label for="password-access">Enter your password</label>
+                      <input type="password" name="password-access" id="password_access">
+                  </div>
+                  <input  type="submit" value="Access Account" id="access_account">
+              </form>
+              </td>
+          </tr>
+    </table>
+
+    <div class="container text-center" id="account-container">
+        <p id='total_accounts'> There are currently {{accounts}} accounts </p>
+    </div>
+
+    <div class="container hidden" id="account-actions">
+        <div>
+            <h2 id="account_header"></h2>
+            <h6 id="account_balance"></h6>
+        </div>
+        <div class="container text-center" id="action-container">
+            <label for="action-amount">Enter amount</label>
+            <input type="number" name="action-amount" id="action-amount">
+        </div>
+        <div class="container text-center" id="actions">
+            <input  type="submit" value="Withdraw Amount" id="withdraw">
+            <input  type="submit" value="Deposit Amount" id="deposit">
+            <input  type="submit" value="Delete Account" id="delete_account">
+            <input  type="submit" value="Modify Account Name" id="modify_account_name">
+            <input  type="submit" value="Modify Account Password" id="modify_account_password">
+        </div>
+    </div>
+
+    <div class="container text-center hidden" id="modify_name">
+        <form id="modify_name_form">
+            <div>
+                <label for="modify_fname">First Name</label>
+                <input type="text" name="modify_fname" id="modify_fname">
+            </div>
+            <div>
+                <label for="modify_lname">Last Name</label>
+                <input type="text" name="modify_lname" id="modify_lname">
+            </div>
+            <div>
+                <input type="submit" value="Update" id="update_name">
+            </div>
+        </form>
+    </div>
+
+    <div class="container text-center hidden" id="modify_password">
+        <form id="modify_password_form">
+            <div>
+                <label for="old_password">Old Password</label>
+                <input type="password" name="old_password" id="old_password">
+            </div>
+            <div>
+                <label for="new_password">New Password</label>
+                <input type="password" name="new_password" id="new_password">
+            </div>
+            <div>
+                <input type="submit" value="Update" id="update_password">
+            </div>
+        </form>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>

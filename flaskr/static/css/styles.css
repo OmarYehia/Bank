@@ -1,0 +1,52 @@
+#form-container {
+    background-color: rgba(115, 194, 190, 0.466);
+    align-items: center;
+    padding: 5%;
+    margin-bottom: 0.5%;
+}
+
+#column-1, #column-2{
+    width: 50%;
+
+}
+
+.form{
+    padding: 7%;
+}
+
+#first_name, #last_name, #password-create, #deposit_amount, #account_id, #password-access {
+    float: right;
+}
+
+#create_account, #access_account {
+    margin-top: 2%;
+}
+
+#account-container {
+    background-color: rgba(115, 194, 190, 0.466);
+    align-items: center;
+}
+
+#account-container p{
+    padding: 0.9%;
+    margin-bottom: 0.5%;
+}
+
+#action-amount-container {
+    padding: 1.5%;
+}
+
+#account-actions, #modify_name, #modify_password {
+    background-color: rgba(115, 194, 190, 0.466);
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 0.5%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
