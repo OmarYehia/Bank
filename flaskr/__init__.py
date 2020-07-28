@@ -22,7 +22,8 @@ def create_app(test_config=None):
     @app.route('/')
     def index():
         number_of_accounts = len(Account.query.all())
-        return render_template('index.html', accounts=number_of_accounts)
+        return render_template('index.html', accounts=number_of_accounts), 200
+
 
     @app.route('/accounts/create', methods=['POST'])
     def create_account():
@@ -52,6 +53,7 @@ def create_app(test_config=None):
             res_body['first_name'] = new_account.first_name
             res_body['last_name'] = new_account.last_name
             res_body['balance'] = new_account.balance
+            res_body['success'] = True
             
         except:
             error = True
