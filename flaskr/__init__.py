@@ -238,7 +238,7 @@ def create_app(test_config=None):
         return jsonify({
             'success': False,
             'error': 400,
-            'message': 'There is a missing field'
+            'message': 'Bad request'
         }), 400
     
     @app.errorhandler(401)
@@ -246,7 +246,7 @@ def create_app(test_config=None):
         return jsonify({
             'success': False,
             'error': 401,
-            'message': 'Sorry, that password is not correct!'
+            'message': 'Unauthorized access'
         }), 401
 
     @app.errorhandler(404)
@@ -262,7 +262,7 @@ def create_app(test_config=None):
         return jsonify({
             'success': False,
             'error': 422,
-            'message': 'The request could not be completed'
+            'message': 'Unprocessable request'
         }), 422
 
 
