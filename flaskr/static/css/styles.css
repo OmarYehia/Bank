@@ -14,7 +14,7 @@
     padding: 7%;
 }
 
-#first_name, #last_name, #password-create, #deposit_amount, #account_id, #password-access {
+#first_name, #last_name, #password_create, #deposit_amount, #account_id, #password_access {
     float: right;
 }
 
